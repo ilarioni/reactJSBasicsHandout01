@@ -35,6 +35,23 @@
         
         document.write(mycar.brand);
     </script>
+
+    <h3> method in classes </h3>
+
+    <script>
+        class Car {
+          constructor(name) {
+            this.brand = name;
+          }
+        
+          present() {
+            return 'I have a ' + this.brand;
+          }
+        }
+        
+        mycar = new Car("Ford");
+        document.write(mycar.present());
+    </script>
     
 </body>
 </html>
