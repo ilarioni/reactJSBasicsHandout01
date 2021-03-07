@@ -634,7 +634,20 @@
     <h3>Props in the Constructor</h3>
     <p>If your component has a constructor function, the props should always be passed to the constructor and also to the React.Component via the super() method.</p>
 
-    
+    <!--
+      class Car extends React.Component {
+        constructor(props) {
+          super(props);
+        }
+        render() {
+          return <h2>I am a {this.props.model}!</h2>;
+        }
+      }
+
+      ReactDOM.render(<Car model="Mustang"/>, document.getElementById('root'));
+    -->
+
+
 
 
 
