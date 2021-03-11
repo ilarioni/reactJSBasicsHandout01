@@ -894,6 +894,15 @@
     <h3>Updating</h3>
     <p>A component is updated whenever there is a change in the component's state or props.</p>
 
+    <h4>React has five built-in methods that gets called, in this order, when a component is updated:</h4>
+    <p>getDerivedStateFromProps()</p>
+    <p>shouldComponentUpdate()</p>
+    <p>render()</p>
+    <p>getSnapshotBeforeUpdate()</p>
+    <p>componentDidUpdate()</p>
+
+    <p>The render() method is required and will always be called, the others are optional and will be called if you define them.</p>
+    
 
 
 
