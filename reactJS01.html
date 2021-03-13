@@ -1177,5 +1177,28 @@
     <p>For methods in React, the this keyword should represent the component that owns the method.</p>
     <p>That is why you should use arrow functions. With arrow functions, this will always represent the object that defined the arrow function.</p>
 
+
+    <!--
+      import React from 'react';
+      import ReactDOM from 'react-dom';
+
+      class Football extends React.Component {
+        shoot = () => {
+          alert(this);
+          /*
+          The 'this' keyword refers to the component object
+          */
+        }
+        render() {
+          return (
+            <button onClick={this.shoot}>Take the shot!</button>
+          );
+        }
+      }
+
+      ReactDOM.render(<Football />, document.getElementById('root42'));
+    -->
+
+
 </body>
 </html>
