@@ -1236,8 +1236,25 @@
     <h3>Passing Arguments</h3>
     <p>If you want to send parameters into an event handler, you have two options: Make an anonymous arrow function or bind the event handler to this. </p>
 
+    <!--
+      import React from 'react';
+      import ReactDOM from 'react-dom';
 
-    
+      class Football extends React.Component {
+        shoot = (a) => {
+          alert(a);
+        }
+        render() {
+          return (
+            <button onClick={() => this.shoot("Goal")}>Take the shot!</button>
+          );
+        }
+      }
+
+      ReactDOM.render(<Football />, document.getElementById('root44'));
+    -->
+
+
     
 
 </body>
