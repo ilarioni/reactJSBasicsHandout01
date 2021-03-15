@@ -1669,5 +1669,55 @@
 
     <div id="root57"></div>
 
+    <h3>camelCased Property Names</h3>
+    <p>Since the inline CSS is written in a JavaScript object, properties with two names, like background-color, must be written with camel case syntax:</p>
+
+    <!--
+      import React from 'react';
+      import ReactDOM from 'react-dom';
+
+      class MyHeader extends React.Component {
+        render() {
+          return (
+            <div>
+              <h1 style={{backgroundColor: "lightblue"}}>Hello Style!</h1>
+              <p>Add a little style!</p>
+            </div>
+          );
+        }
+      }
+      ReactDOM.render(<MyHeader />, document.getElementById('root58'));
+    -->
+    <div id="root58"></div>
+
+    <h3> JavaScript Object</h3>
+    <!--
+      import React from 'react';
+      import ReactDOM from 'react-dom';
+
+      class MyHeader extends React.Component {
+        render() {
+          const mystyle = {
+            color: "white",
+            backgroundColor: "DodgerBlue",
+            padding: "10px",
+            fontFamily: "Arial"
+          };
+          return (
+            <div>
+              <h1 style={mystyle}>Hello Style!</h1>
+              <p>Add a little style!</p>
+            </div>
+          );
+        }
+      }
+
+      ReactDOM.render(<MyHeader />, document.getElementById('root59'));
+    -->
+
+    <div id="root59"></div>
+
+
+
 </body>
 </html>
