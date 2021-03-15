@@ -1396,6 +1396,80 @@
 
     <div id="root49"></div>
 
+    <h3>Conditional Rendering</h3>
+    <p>If you do not want to display the h1 element until the user has done any input, you can add an if statement.</p>
+    <p>1. We create an empty variable, in this example we call it header.</p>
+    <p>2. We add an if statement to insert content to the header variable if the user has done any input.</p>
+    <p>3. We insert the header variable in the output, using curly brackets.</p>
+
+    <!--
+      import React from 'react';
+      import ReactDOM from 'react-dom';
+
+      class MyForm extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = { username: ''};
+        }
+        myChangeHandler = (event) => {
+          this.setState({username: event.target.value});
+        }
+        render() {
+          let header = '';
+          if(this.state.username) {
+            header = <h1>Hello {this.state.username}</h1>;
+          } else {
+            header = '';
+          }
+          return (
+            <form>
+              {header}
+              <p>Enter your name:</p>
+              <input type='text' onChange={this.myChangeHandler}/>
+            </form>
+          );
+        }
+      }
+
+      ReactDOM.render(<MyForm />, document.getElementById('root50'))
+    -->
+
+    <div id="root50"></div>
+
+    <h3>submitting forms</h3>
+    <p>you can control the submit action by adding an event handler in the onSubmit attribute</p>
+   
+    <!--
+      import React from 'react';
+      import ReactDOM from 'react-dom';
+
+      class myForm extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {username: '' };
+        }
+        mySubmitHandler = (event) => {
+          event.preventDefault();
+          alert("You are submitting " + this.state.username);
+        }
+        myChangeHandler = (event) => {
+          this.setState({username: event.target.value});
+        }
+        render() {
+          return (
+            <form onSubmit={this.mySubmitHandler}>
+              <h1>Hello {this.state.username}</h1>
+              <p>Enter your name, and submit:</p>
+              <iput type='text' onChange={this.myChangeHandler}/>
+              <input type='submit'/>
+            </form>
+          );
+        }
+      }
+      ReactDOM.render(<MyForm />, document.getElementById('root51'));
+
+    -->
+    <div id="root51"></div>
 
 </body>
 </html>
