@@ -1362,5 +1362,40 @@
 
     <div id="root48"></div>
 
+    <h3>Handling Forms</h3>
+    <p>Handling forms is about how you handle the data when it changes value or gets submitted.</p>
+
+    <p>When the data is handled by the components, all the data is stored in the component state.</p>
+
+    <!--
+      import React from 'react';
+      import ReactDOM from 'react-dom';
+
+      class MyForm extends React.component {
+        constructor(props) {
+          super(props);
+          this.state = { username: ''};
+        }
+        myChangeHandler = (event) => {
+          this.setState({username: event.target.value});
+        }
+        render() {
+          return (
+            <form>
+              <h1>Hello {this.state.username}</h1>
+              <p>Enter your name:</p>
+              <input type='text' onChange={this.myChangeHandler}/>
+            </form>
+          );
+        }
+      }
+
+      ReactDOM.render(<MyForm />, document.getElementById('root49'));
+
+    -->
+
+    <div id="root49"></div>
+
+
 </body>
 </html>
