@@ -1471,5 +1471,81 @@
     -->
     <div id="root51"></div>
 
+    <h3>Multiple Input Fields</h3>
+    <p>You can control the values of more than one input field by adding a name attribute to each element.</p>
+
+    <!--
+      import React from 'react';
+      import ReactDOM from 'react-dom';
+
+      class MyForm extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = { username: '', age: null,};
+        }
+        myChangeHandler = (event) => {
+          let nam = event.target.name;
+          let val = event.target.value;
+          this.setState({[nam]: val});
+        }
+        render() {
+          return (
+            <form>
+              <h1>Hello {this.state.username} {this.state.age}</h1>
+              <p>Enter your name:</p>
+              <input type='text' name='username' onChange={this.myChangeHandler}/>
+              <p>Enter your age:</p>
+              <input type='text' name='age' onChange={this.myChangeHandler}/>
+            </form>
+          );
+        }
+      }
+      ReactDOM.render(<MyForm />, document.getElement.ById('root52'));
+    -->
+
+    <div id="root52"></div>
+
+    <h3>validating form input</h3>
+    <p>You can validate form input when the user is typing or you can wait until the form gets submitted.</p>
+
+    <!--
+      import React from 'react';
+      import ReactDOM from 'react-dom';
+
+      class MyForm extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {username: '', age: null, };
+        }
+        myChangeHandler = (event) => {
+          let nam = event.target.name;
+          let val = event.target.value;
+          if (nam === "age") {
+            if (!Number(val)) {
+              alert("Your age must be a number");
+            }
+          }
+          this.setState({[nam]: val});
+        }
+        render() {
+          return (
+            <form>
+              <h1>Hello {this.state.username} {this.state.age}</h1>
+              <p>Enter your name:</p>
+              <input type='text' name='username' onChange={this.myChangeHandler}/>
+              <p>Enter your age:</p>
+              <input type='text' name='age' onChange={this.myChangeHandler}/>
+            </form>
+          );
+        }
+      }
+      ReactDOM.render(<MyForm />, document.getElementById('root53'))
+
+    -->
+
+    <div id="root53"></div>
+
+
+
 </body>
 </html>
