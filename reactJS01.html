@@ -1717,6 +1717,88 @@
 
     <div id="root59"></div>
 
+    <h3>CSS Stylesheet</h3>
+    <p>You can write your CSS styling in a separate file with .css extention </p>
+    <!--
+      App.css file
+      body {
+        background-color: #282c34;
+        color: white;
+        padding: 40px;
+        font-family: Arial;
+        text-align: center;
+      }
+    -->
+
+    <p> and import this file in React</p>
+
+    <!--
+      import React from 'react';
+      import ReactDOM from 'react-dom';
+      import './App.css';
+
+      class MyHeader extends React.Component {
+        render() {
+          return (
+            <div>
+              <h1>Hello Style!</h1>
+              <p>Add a little style!</p>
+            </div>
+          );
+        }
+      }
+      ReactDOM.render(<MyHeader />, document.getElementById('root60'));
+    -->
+
+    <div id="root60"></div>
+
+    <h3>Css Modules</h3>
+    <p>Another way of adding styles to your application is to use CSS Modules.</p>
+
+    <p>Create a new file called "mystyle.module.css" and insert some CSS code in it:</p>
+
+    <!--
+      .bigblue {
+        color: DodgerBlue;
+        padding: 40px;
+        font-family: Arial;
+        text-align: center;
+      }
+    -->
+
+    <p>Import the stylesheet in your component:</p>
+
+    <!--
+      import React from 'react';
+      import ReactDOM from 'react-dom';
+      import styles from './mystyle.module.css'; 
+
+      class Car extends React.Component {
+        render() {
+          return <h1 className={styles.bigblue}>Hello Car!</h1>;
+        }
+      }
+
+      export default Car;
+
+    -->
+
+    <p>Import the component in your application:</p>
+
+    <!--
+      import React from 'react';
+      import ReactDOM from 'react-dom';
+      import Car from './App.js';
+
+      ReactDOM.render(<Car />, document.getElementById('root61'));
+
+    -->
+    <div id="root61"></div>
+
+
+    
+    
+
 
 
 </body>
